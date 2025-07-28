@@ -1,8 +1,8 @@
-# Web Development Project 7 - *Name of App Here*
+# Web Development Project 7 - *Five Stack*
 
-Submitted by: **Your Name Here**
+Submitted by: **William Zheng**
 
-This web app: **insert description**
+This web app: **Team building site based around the game valorant. This app allows you to type the IGN, choose, your agent, and select loadout. This features a summary page as well as any-time editing.**
 
 Time spent: **X** hours spent in total
 
@@ -14,7 +14,7 @@ The following **required** functionality is completed:
 - [ ] **The web app contains a page that features a create form to add a new crewmate**
   - Users can name the crewmate
   - Users can set the crewmate’s attributes by clicking on one of several values
-- [ ] **The web app includes a summary page of all the user’s added crewmatese**
+- [ ] **The web app includes a summary page of all the user’s added crewmates**
   -  The web app contains a summary page dedicated to displaying all the crewmates the user has made so far
   -  The summary page is sorted by creation date such that the most recently created crewmates appear at the top
 - [ ] **A previously created crewmate can be updated from the list of crewmates in the summary page**
@@ -27,7 +27,7 @@ The following **required** functionality is completed:
   - [ ] **Each crewmate has a direct, unique URL link to an info page about them**
     - Clicking on a crewmate in the summary page navigates to a detail page for that crewmate
     - The detail page contains extra information about the crewmate not included in the summary page
-    - Users can navigate to to the edit form from the detail page
+    - Users can navigate to the edit form from the detail page
 
 The following **optional** features are implemented:
 
@@ -49,14 +49,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+
+GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
+
 
 ## Notes
 
@@ -64,7 +60,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [William Zheng]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
