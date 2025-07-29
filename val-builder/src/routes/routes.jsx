@@ -1,10 +1,9 @@
-import {createBrowserRouter} from 'react-router-dom'
-import App from '../App'
-
-import AgentDetails from './AgentDetails'
-import AgentSummary from './AgentSummary'
-import EditAgent from './EditAgent'
-import CreateAgent from './CreateAgent'
+import {createBrowserRouter} from 'react-router-dom';
+import App from '../App';
+import AgentDetails from './AgentDetails';
+import AgentSummary from './AgentSummary';
+import EditAgent from './EditAgent';
+import CreateAgent from './CreateAgent';
 
 export const router = createBrowserRouter([
     {

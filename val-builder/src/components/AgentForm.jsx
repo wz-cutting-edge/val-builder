@@ -1,12 +1,12 @@
-import { useState } from "react"
-import { AGENTS, PRIMARY_WEAPON, SECONDARY_WEAPONS } from './valorant.js'
+import { useState } from "react";
+import { AGENTS, PRIMARY_WEAPONS, SECONDARY_WEAPONS } from '../valorant.js';
 
 
 const AgentForm = ({onSubmit, initial = {} }) =>{
     const [values, setValues] =useState({
         player_name: initial.player_name || '',
         agent: initial.agent || AGENTS[0],
-        pprimary_weapon: initial.primary_weapon || PRIMARY_WEAPONS[0],
+        primary_weapon: initial.primary_weapon || PRIMARY_WEAPONS[0],
         secondary_weapon: initial.secondary_weapon || SECONDARY_WEAPONS[0]
     });
 
@@ -26,7 +26,7 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
                 <input
                     id="player_name"
                     name="player_name"
-                    values={values.player_name}
+                    value={values.player_name}
                     onChange={handleChange}
                     placeholder="Enter your IGN"
                     required
@@ -37,7 +37,7 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
                 <select
                     id="agent"
                     name="agent"
-                    values={values.agent}
+                    value={values.agent}
                     onChange={handleChange}
                 >
                     {AGENTS.map(agent => (
@@ -46,11 +46,11 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
                 </select>
             </div>
             <div>
-                <label htmlFor="player_name">Primary Weapon:</label>
+                <label htmlFor="primary_weapon">Primary Weapon:</label>
                 <select
                     id="primary_weapon"
                     name="primary_weapon"
-                    values={values.primary_weapon}
+                    value={values.primary_weapon}
                     onChange={handleChange}
                 >
                     {PRIMARY_WEAPONS.map(primary_weapon => (
@@ -59,11 +59,11 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
                 </select>
             </div>
             <div>
-                <label htmlFor="player_name">Secondary Weapon:</label>
+                <label htmlFor="secondary_weapon">Secondary Weapon:</label>
                 <select
                     id="secondary_weapon"
                     name="secondary_weapon"
-                    values={values.secondary_weapon}
+                    value={values.secondary_weapon}
                     onChange={handleChange}
                 >
                     {SECONDARY_WEAPONS.map(secondary_weapon => (
