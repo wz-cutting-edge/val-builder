@@ -49,7 +49,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-
+![Five Stack](https://github.com/user-attachments/assets/820221c0-a978-4a05-b298-522d6789f5f1)
 
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
