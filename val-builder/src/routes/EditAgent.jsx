@@ -94,7 +94,7 @@ const EditAgent = () => {
                     initial={loadout} 
                 />
                 
-                <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+                <div className="detail-actions" style={{ marginTop: '2rem' }}>
                     <button 
                         onClick={handleDelete} 
                         className="delete-button"
@@ -102,8 +102,8 @@ const EditAgent = () => {
                         Delete Loadout
                     </button>
                 </div>
-                
-                <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+
+                <div className="detail-actions" style={{ marginTop: '1rem' }}>
                     <button 
                         onClick={() => navigate(`/${id}`)} 
                         className="secondary-button"

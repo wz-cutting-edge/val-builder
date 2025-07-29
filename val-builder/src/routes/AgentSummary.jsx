@@ -8,14 +8,14 @@ const AgentSummary = () => {
 
     useEffect(() => {
         fetchLoadouts();
-    },[]);
+    }, []);
 
     async function fetchLoadouts() {
         setIsLoading(true);
-        const {data, error} = await supabase
+        const { data, error } = await supabase
             .from('loadouts')
             .select('*')
-            .order('created_at', {ascending:false});
+            .order('created_at', { ascending: false });
 
         if (error) {
             console.error('Error fetching loadouts:', error);
@@ -25,13 +25,20 @@ const AgentSummary = () => {
         }
         setIsLoading(false);
     }
-    
-    return(
+
+    return (
         <div className="summary-container">
-            <h2>All Agent Loadouts ({loadouts.length})</h2>
-            
+            <div className="summary-header">
+                <h2>All Agent Loadouts ({loadouts.length})</h2>
+            </div>
+
             {loadouts.length === 0 ? (
-                <p>No loadouts created yet. <Link to="/new">Create your first one!</Link></p>
+                <div className="empty-state">
+                    <p>No agent loadouts created yet.</p>
+                    <Link to="/new" className="primary-button" style={{ display: 'inline-block' }}>
+                        Create Your First Loadout
+                    </Link>
+                </div>
             ) : (
                 <div className="loadouts-grid">
                     {loadouts.map(loadout => (
@@ -42,9 +49,9 @@ const AgentSummary = () => {
                                         <Link to={`/${loadout.id}`}>{loadout.player_name}</Link>
                                     </h3>
                                     <p className="loadout-info">
-                                        <strong>Agent:</strong> {loadout.agent} | 
-                                        <strong> Primary:</strong> {loadout.primary_weapon} | 
-                                        <strong> Secondary:</strong> {loadout.secondary_weapon}
+                                        <strong>Agent:</strong> {loadout.agent}<br />
+                                        <strong>Primary:</strong> {loadout.primary_weapon}<br />
+                                        <strong>Secondary:</strong> {loadout.secondary_weapon}
                                     </p>
                                     <p className="loadout-date">
                                         Created: {new Date(loadout.created_at).toLocaleDateString()}

@@ -9,7 +9,7 @@ function App() {
     <div>
       <h1>Five Stack</h1>
       <NavBar />
-      <main className="p-6">
+      <main>
         <Outlet />
       </main>
     </div>
