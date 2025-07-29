@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { AGENTS, PRIMARY_WEAPONS, SECONDARY_WEAPONS } from '../valorant.js';
 
-
-const AgentForm = ({onSubmit, initial = {} }) =>{
-    const [values, setValues] =useState({
+const AgentForm = ({onSubmit, initial = {} }) => {
+    const [values, setValues] = useState({
         player_name: initial.player_name || '',
         agent: initial.agent || AGENTS[0],
         primary_weapon: initial.primary_weapon || PRIMARY_WEAPONS[0],
@@ -20,9 +19,9 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
     }
 
     return(
-        <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px'}}>
-            <div>
-                <label htmlFor="player_name">Player Name (IGN)</label>
+        <form onSubmit={handleSubmit} className="agent-form">
+            <div className="form-group">
+                <label htmlFor="player_name">Player Name (IGN):</label>
                 <input
                     id="player_name"
                     name="player_name"
@@ -32,7 +31,7 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
                     required
                 />
             </div>
-            <div>
+            <div className="form-group">
                 <label htmlFor="agent">Agent:</label>
                 <select
                     id="agent"
@@ -45,7 +44,7 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
                     ))}
                 </select>
             </div>
-            <div>
+            <div className="form-group">
                 <label htmlFor="primary_weapon">Primary Weapon:</label>
                 <select
                     id="primary_weapon"
@@ -58,7 +57,7 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
                     ))}
                 </select>
             </div>
-            <div>
+            <div className="form-group">
                 <label htmlFor="secondary_weapon">Secondary Weapon:</label>
                 <select
                     id="secondary_weapon"
@@ -72,11 +71,11 @@ const AgentForm = ({onSubmit, initial = {} }) =>{
                 </select>
             </div>
 
-            <button type="submit">
+            <button type="submit" className="submit-button">
                 Save Loadout
             </button>
         </form>
     )
- }
+}
 
 export default AgentForm;

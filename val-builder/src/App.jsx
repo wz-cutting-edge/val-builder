@@ -7,7 +7,7 @@ import { supabase } from './client';
 function App() {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Five Stack</h1>
       <NavBar />
       <main className="p-6">
         <Outlet />

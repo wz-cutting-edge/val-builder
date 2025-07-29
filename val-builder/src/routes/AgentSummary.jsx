@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../client';
 import { Link } from 'react-router-dom';
 
-const AgentSummary = () =>{
+const AgentSummary = () => {
     const [loadouts, setLoadouts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() =>{
+    useEffect(() => {
         fetchLoadouts();
     },[]);
 
@@ -27,31 +27,31 @@ const AgentSummary = () =>{
     }
     
     return(
-        <div>
+        <div className="summary-container">
             <h2>All Agent Loadouts ({loadouts.length})</h2>
             
             {loadouts.length === 0 ? (
                 <p>No loadouts created yet. <Link to="/new">Create your first one!</Link></p>
             ) : (
-                <div>
+                <div className="loadouts-grid">
                     {loadouts.map(loadout => (
-                        <div key={loadout.id}>
-                            <div>
+                        <div key={loadout.id} className="loadout-card">
+                            <div className="loadout-card-header">
                                 <div>
                                     <h3>
                                         <Link to={`/${loadout.id}`}>{loadout.player_name}</Link>
                                     </h3>
-                                    <p>
+                                    <p className="loadout-info">
                                         <strong>Agent:</strong> {loadout.agent} | 
                                         <strong> Primary:</strong> {loadout.primary_weapon} | 
                                         <strong> Secondary:</strong> {loadout.secondary_weapon}
                                     </p>
-                                    <p>
+                                    <p className="loadout-date">
                                         Created: {new Date(loadout.created_at).toLocaleDateString()}
                                     </p>
                                 </div>
                                 <div>
-                                    <Link to={`/${loadout.id}/edit`}>Edit</Link>
+                                    <Link to={`/${loadout.id}/edit`} className="edit-button">Edit</Link>
                                 </div>
                             </div>
                         </div>
