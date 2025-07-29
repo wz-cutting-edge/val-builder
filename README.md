@@ -4,7 +4,7 @@ Submitted by: **William Zheng**
 
 This web app: **Team building site based around the game valorant. This app allows you to type the IGN, choose, your agent, and select loadout. This features a summary page as well as any-time editing.**
 
-Time spent: **X** hours spent in total
+Time spent: **22** hours spent in total
 
 ## Required Features
 
@@ -43,7 +43,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] Css to make it look better and console logs for debugging
 
 ## Video Walkthrough
 
@@ -56,7 +56,7 @@ GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+This website was definitely the most challenging project so far, but it was well worth the effort. I’d been meaning to learn Supabase for a while, and finally got the chance here. The trickiest part was making sure everything matched up in the database to avoid errors. Supabase turned out to be much easier to use than MySQL, which was a nice surprise. Aside from needing some help with styling, everything else felt familiar from previous projects—just harder.
 
 ## License
 
